@@ -13,12 +13,11 @@ def create_app(test_config=None):
     try:
         os.makedirs(app.instance_path)
     except Exception as erro:
-        print('O erro é', str(erro))
-    
-    @app.route('/')
-    def index():
-        return 'Hello World!'
-    
+        # print('O erro é', str(erro))
+        pass
+        
     from . import db; db.iniciar(app) # a instância do banco abstraída na classe db.py será usada aqui
     from . import auth;app.register_blueprint(auth.bp)
+    from . import blog;app.register_blueprint(blog.bp)
+    app.add_url_rule('/','index')
     return app

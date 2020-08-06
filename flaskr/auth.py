@@ -53,7 +53,7 @@ def login():
             session.clear()
             session['id'] = usuario['id']
             return redirect(url_for('index'))
-
+# mario, 123
         flash(erro)        
 
     return render_template('auth/login.html')
@@ -63,11 +63,19 @@ def logout():
     session.clear()
     return redirect(url_for('index'))
 
-@bp.before_request 
+@bp.before_app_request
 def carrega_usuario_logado(): # decorador que retorna o estado de login do usuário
-    if session['id'] is not None:
-        id_usuario = session.get('id')
-        if id_usuario is None:
-            g.usuario = None
-        else:
-            g.usuario = conecta().execute('select * from user where id = ?', (id_usuario,)).fetchone()
+    id_usuario = session.get('id')
+    if id_usuario is None:
+        g.usuario = None
+    else:
+        g.usuario = conecta().execute('select * from user where id = ?', (id_usuario,)).fetchone()
+
+def login_required(view):
+    @functools.wraps(view)
+    def wrapped_view(**kwargs):
+        if g.usuario is None:
+            return redirect(url_for('auth.login'))
+
+        return view(**kwargs)
+    return wrapped_view

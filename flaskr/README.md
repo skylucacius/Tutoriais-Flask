@@ -12,7 +12,7 @@ Para isso, faz-se necessário o seguinte:
 1. Incluir um arquivo __init__.py, que é equivalente a um módulo app.py;
 
 2. Fora do pacote, ou seja, da pasta que contém o arquivo __init__.py, deve-se iniciar um "flask run" desde que a variável de ambiente "flask_app" esteja configurada como 'flaskr', ou seja, o nome do pacote;  
- * Para criar uma variável de ambiente no powershell, deve usar $env:flask_app = 'flaskr'
- * (Opcionalmente) configurar a variável de ambiente 'flask_env' para 'development'
+  * Para criar uma variável de ambiente no powershell, deve usar $env:flask_app = 'flaskr'
+  * (Opcionalmente) configurar a variável de ambiente 'flask_env' para 'development'
 
 3. Rode o "flask run" no terminal powershell propriamente dito;

@@ -5,11 +5,11 @@
   <h1>Flaskr: a aplicação tutorial do Flask</h1>
   <ul>
     {% if g.usuario %}
-      <li><span>{{ g.user['username'] }}</span>
-      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+      <li><span>Logado como {{ g.usuario['username'] }}</span>
+      <li><a href="{{ url_for('auth.logout') }}">Deslogar</a>
     {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
+      <li><a href="{{ url_for('auth.register') }}">Registrar</a>
+      <li><a href="{{ url_for('auth.login') }}">Logar</a>
     {% endif %}
   </ul>
 </nav>
