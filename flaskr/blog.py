@@ -66,7 +66,7 @@ def update_post(id): # atualiza um post por seu id
         erro = None
 
         if not titulo:
-            erro = 'Title is required.'
+            erro = 'Título é necessário.'
 
         if erro is not None:
             flash(erro)
