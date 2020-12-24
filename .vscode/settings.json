@@ -1,5 +1,3 @@
 {
-    "python.pythonPath": "C:\\Users\\familia\\Desktop\\TI\\Python\\VS Code - Flask Env\\Scripts\\python.exe",
-    "python.autoComplete.extraPaths": ["C:\\Users\\familia\\Desktop\\TI\\Python\\Tutoriais-Flask\\backend",
-    "C:\\Users\\familia\\Desktop\\TI\\Python\\Tutoriais-Flask\\frontend"]
+    "python.pythonPath": "C:\\Users\\TI\\Desktop\\aprendizados VS Code\\Tutoriais-Flask\\DO Tutorial Flask\\Flask-venv\\Scripts\\python.exe"
 }
