@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\TI\\Desktop\\aprendizados VS Code\\Tutoriais-Flask\\DO Tutorial Flask\\Flask-venv\\Scripts\\python.exe"
+    "python.pythonPath": "DO Tutorial Flask\\Flask-venv\\Scripts\\python.exe",
+    "python.pipenvPath": "DO Tutorial Flask\\Flask-venv\\Scripts"
 }
