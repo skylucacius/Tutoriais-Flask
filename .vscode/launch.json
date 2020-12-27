@@ -8,11 +8,15 @@
             "name": "Python: Flask",
             "type": "python",
             "request": "launch",
-            "module": "flask",
+            //para executar como programa python (para debugar mais rapidamente)
+            // "program": "${file}", 
+
+            // para executar como servidor Flask
+            "module": "flask", 
             "env": {
                 "FLASK_APP": "${file}",
                 "FLASK_ENV": "development",
-                // "FLASK_DEBUG": "1"
+                "FLASK_DEBUG": "1"
             },
             "args": [
                 "run"
