@@ -8,7 +8,7 @@
             "name": "Python: Flask",
             "type": "python",
             "request": "launch",
-            //para executar como programa python (para debugar mais rapidamente)
+            //para executar como programa python (debugar mais rapidamente)
             // "program": "${file}", 
 
             // para executar como servidor Flask
